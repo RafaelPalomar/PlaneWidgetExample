@@ -24,11 +24,11 @@ int main(int argc, char *argv[])
   vtkSmartPointer<vtkImplicitPlaneWidget> planeWidget =
     vtkSmartPointer<vtkImplicitPlaneWidget>::New();
   planeWidget->SetInteractor(interactor);
-  planeWidget->PlaceWidget(sphereSource->GetOutput()->GetBounds());
   planeWidget->OutlineTranslationOff();
   planeWidget->ScaleEnabledOff();
   planeWidget->OriginTranslationOff();
   planeWidget->OutsideBoundsOn();
+  planeWidget->SetEnabled(true);
 
   interactor->Initialize();
   renderWindow->Render();
